@@ -1,0 +1,135 @@
+{
+  "skill_name": "uncodixify",
+  "evals": [
+    {
+      "id": "strip-decorative-dashboard-shell",
+      "prompt": "Refactor a React dashboard view so it stops using floating glass cards, gradients, oversized rounded corners, eyebrow labels, and decorative copy. Keep it product-like and restrained.",
+      "expected_output": "A rewritten component with restrained hierarchy, simple structure, dark neutral surfaces, subtle borders, and no banned AI-dashboard tropes.",
+      "files": [
+        "evals/files/dashboard-shell.tsx"
+      ],
+      "assertions": [
+        {
+          "id": "tsx-output-exists",
+          "type": "output_file_exists",
+          "path_glob": "*.tsx",
+          "description": "The run produces a TSX component file."
+        },
+        {
+          "id": "dark-base-present",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(bg-zinc-950|bg-zinc-900|bg-black|bg-neutral-900)\\b",
+          "description": "The component establishes a restrained dark base."
+        },
+        {
+          "id": "fine-lines-present",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(border-white\\/(5|10|15)|divide-white\\/(5|10|15))\\b",
+          "description": "The component uses subtle white separators."
+        },
+        {
+          "id": "no-purple-classes",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(bg|text|border|ring)-purple-\\d{2,3}\\b",
+          "description": "The component does not use purple utility classes."
+        },
+        {
+          "id": "no-large-radii",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\brounded-(xl|2xl|3xl|4xl|full)\\b",
+          "description": "The component keeps corner radii restrained."
+        },
+        {
+          "id": "no-glass-gradient-eyebrow",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "backdrop-blur|bg-gradient-to|<small>",
+          "description": "The component avoids glassmorphism, gradients, and eyebrow labels."
+        },
+        {
+          "id": "no-ornamental-copy",
+          "type": "output_text_not_contains",
+          "path_glob": "*.tsx",
+          "text": "Operational clarity without the clutter.",
+          "description": "The component removes decorative dashboard hero copy."
+        },
+        {
+          "id": "normal-page-title",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "<h1[^>]*>Projects</h1>",
+          "description": "The page title is reduced to a direct, product-shaped heading."
+        }
+      ]
+    },
+    {
+      "id": "normalize-form-heavy-settings-screen",
+      "prompt": "Clean up a Tailwind settings page that looks overdesigned and template-like. Make it look normal, functional, and human-designed without introducing ornamental sections or visual filler.",
+      "expected_output": "A settings UI with conventional form layout, restrained radius, neutral colors, simple separators, and no decorative presentation patterns.",
+      "files": [
+        "evals/files/settings-screen.tsx"
+      ],
+      "assertions": [
+        {
+          "id": "tsx-output-exists",
+          "type": "output_file_exists",
+          "path_glob": "*.tsx",
+          "description": "The run produces a TSX component file."
+        },
+        {
+          "id": "dark-base-present",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(bg-zinc-950|bg-zinc-900|bg-black|bg-neutral-900)\\b",
+          "description": "The component establishes a restrained dark base."
+        },
+        {
+          "id": "fine-lines-present",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(border-white\\/(5|10|15)|divide-white\\/(5|10|15))\\b",
+          "description": "The component uses subtle white separators."
+        },
+        {
+          "id": "no-purple-classes",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\b(bg|text|border|ring)-purple-\\d{2,3}\\b",
+          "description": "The component does not use purple utility classes."
+        },
+        {
+          "id": "no-large-radii",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "\\brounded-(xl|2xl|3xl|4xl|full)\\b",
+          "description": "The component keeps corner radii restrained."
+        },
+        {
+          "id": "no-glass-gradient-eyebrow",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "backdrop-blur|bg-gradient-to|<small>",
+          "description": "The component avoids glassmorphism, gradients, and eyebrow labels."
+        },
+        {
+          "id": "no-ornamental-label-copy",
+          "type": "output_text_not_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": ">Night shift<|>Live pulse<",
+          "description": "The component removes ornamental status-style copy."
+        },
+        {
+          "id": "label-and-input-remain",
+          "type": "output_text_matches_regex",
+          "path_glob": "*.tsx",
+          "pattern": "<label[^>]*>Workspace name</label>[\\s\\S]*<input[^>]*>",
+          "description": "The settings screen preserves a conventional label and input structure."
+        }
+      ]
+    }
+  ]
+}

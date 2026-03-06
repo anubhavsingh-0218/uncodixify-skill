@@ -1,0 +1,16 @@
+{
+  "name": "uncodixify-skill-package",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "python3 ./bin/validate-package.py",
+    "uncodixify": "./bin/run-uncodixify.sh",
+    "evals:init": "python3 ./bin/run-evals.py",
+    "evals:grade": "python3 ./bin/grade-evals.py",
+    "evals:run": "python3 ./bin/run-package-evals.py"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.8.2"
+  }
+}
