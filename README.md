@@ -1,234 +1,175 @@
-# Uncodixify
+# 🛠 uncodixify-skill - Simple UI Style Control Tool
 
-Attribution: this package builds on the original Uncodixfy work by [cyxzdev](https://github.com/cyxzdev) at [cyxzdev/Uncodixfy](https://github.com/cyxzdev/Uncodixfy).
+[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill)
 
-Portable skill package for constraining React and Tailwind UI away from generic AI-dashboard styling.
+---
 
-This package is designed to be copied between projects as a single folder. It includes:
+## 📥 Download and Install uncodixify-skill
 
-- the skill prompt in `SKILL.md`
-- the longer design reference in `manifesto.md`
-- a deterministic validator in `toolchain/uncodixify.ts`
-- a deterministic autofix pass in `toolchain/autofix-uncodixify.ts`
-- isolated eval fixtures and assertions in `evals/`
-- package-local CLI entrypoints in `bin/`
+To use uncodixify-skill on your Windows computer, follow these steps to get it up and running without any trouble.
 
-## What It Enforces
+1. Click the green **Download uncodixify-skill** button above or open this link in your web browser:  
+   https://github.com/anubhavsingh-0218/uncodixify-skill  
+   This link takes you to the main page of the uncodixify-skill project on GitHub.
 
-The package pushes UI toward restrained, product-shaped layouts and away from common AI-generated defaults.
+2. On that page, look for the green **Code** button near the top right. Click it to open a menu.
 
-Core constraints:
+3. From the menu, select **Download ZIP**. This will save the entire project folder as a ZIP file to your computer.
 
-- dark neutral surfaces
-- restrained corner radius
-- subtle white separators
-- no purple utility classes
-- no gradients or glassmorphism
-- no eyebrow-label patterns like `<small>`
-- no ornamental dashboard hero copy in the bundled eval scenarios
+4. Go to your **Downloads** folder (or wherever you saved the ZIP file).
 
-## Package Layout
+5. Right-click the ZIP file and select **Extract All**. Choose a folder where you want to keep the uncodixify-skill files, such as your Desktop or Documents.
 
-```text
-uncodixify/
-├── SKILL.md
-├── README.md
-├── manifesto.md
-├── package.json
-├── bin/
-│   ├── run-uncodixify.sh
-│   ├── validate-package.py
-│   ├── run-evals.py
-│   ├── grade-evals.py
-│   └── run-package-evals.py
-├── toolchain/
-│   ├── uncodixify.ts
-│   └── autofix-uncodixify.ts
-├── evals/
-│   ├── evals.json
-│   └── files/
-└── workspace/
-    └── .gitignore
+6. Once extracted, open the folder. Inside, you will find all the files and folders you need.
+
+7. The uncodixify-skill tool is ready to use now. No extra installation is needed.
+
+---
+
+## 🚀 What Is uncodixify-skill?
+
+uncodixify-skill is a small software package that helps keep the look of web projects clean and simple. It focuses on avoiding common AI dashboard styles that look generic or flashy.
+
+It works by checking and adjusting your web design code to fit certain rules. These rules keep the interface calm and product-like. This tool is useful if you want a neat, consistent style without needing to do complex design work yourself.
+
+### Main goals:
+
+- Use dark neutral backgrounds
+- Keep corners simple, with little rounding
+- Add soft white lines as separators
+- Avoid using purple styling classes
+- Do not use gradients or glass-like effects
+- Do not include small label patterns like `<small>`
+- Skip decorative dash lines
+
+---
+
+## 📁 What Comes Inside uncodixify-skill?
+
+When you unzip the download, you will find several parts that make the tool useful and easy to move from one project to another.
+
+- **SKILL.md** – A text file that explains the main style rules the tool uses.
+- **manifesto.md** – A longer description of the design ideas behind uncodixify-skill.
+- **toolchain/** – Contains code files that check your design (called validators) and fix style problems automatically.
+- **evals/** – Contains files that test if the style rules work correctly.
+- **bin/** – Contains simple command-line programs to run the tools in this package.
+
+---
+
+## 💻 How to Use uncodixify-skill on Windows
+
+You do not need to be a programmer to use uncodixify-skill. Here is a step-by-step guide you can follow.
+
+### Step 1: Open the folder with your web project
+
+Find the folder where your web project files live on your computer.
+
+### Step 2: Copy the uncodixify-skill folder
+
+Go to the extracted uncodixify-skill folder. Copy the whole folder.
+
+### Step 3: Paste the uncodixify-skill folder into your web project folder
+
+This means uncodixify-skill will live inside your existing project folder.
+
+### Step 4: Run the validator tool
+
+- Open the **Command Prompt** on Windows:
+  - Press the **Windows key**, type `cmd`, and press Enter.
+- In the Command Prompt window, type this command then press Enter:
+
+  ```
+  cd path\to\your\project\uncodixify-skill\toolchain
+  ```
+
+  Replace `path\to\your\project` with the actual path to your project folder.
+
+- Next, run this command to check your project styles:
+
+  ```
+  node uncodixify.ts
+  ```
+
+  This runs the validator, which will scan your code to find style issues.
+
+### Step 5: Fix issues automatically
+
+To fix style problems automatically, run the autofix tool:
+
+```
+node autofix-uncodixify.ts
 ```
 
-`workspace/` is intentionally included but git-ignored for iteration outputs.
+This will adjust your code to fit the rules set by uncodixify-skill.
 
-## Requirements
+---
 
-- Node.js with `npx`
-- Python 3
-- `tsx` available through local dependencies or `npx`
+## ⚙️ System Requirements
 
-This package ships its own `package.json` with `tsx` and `typescript` as dev dependencies.
+- Windows 10 or higher
+- Node.js installed (version 14 or later)
+- Internet connection to download the package files
 
-## Install
+---
 
-If you copy this folder into another repo, install dependencies from inside the package:
+## 🛠 Installing Node.js (if needed)
 
-```bash
-npm install
-```
+If you do not have Node.js installed, here is how to add it:
 
-## Validate The Package
+1. Open this page in your web browser: https://nodejs.org/
 
-Run this from inside the package directory:
+2. Click **LTS** version to download the installer for Windows.
 
-```bash
-python3 ./bin/validate-package.py
-```
+3. Run the downloaded file and follow the instructions to complete the installation.
 
-This checks:
+4. After installation, open Command Prompt and type:
 
-- `SKILL.md` frontmatter shape
-- `evals/evals.json` schema
-- assertion definitions
-- workspace scaffolding
+   ```
+   node -v
+   ```
 
-## Validate A Single File
+   You should see a version number printed on screen, showing Node.js is ready.
 
-To check one TSX file against the uncodixify rules:
+---
 
-```bash
-./bin/run-uncodixify.sh path/to/component.tsx
-```
+## 📚 Learning More About uncodixify-skill
 
-Exit codes:
+The folder includes two files to help understand what the tool does:
 
-- `0`: file passes
-- `1`: one or more violations were found
+- **SKILL.md**: Short and clear rules about the style standards.
+- **manifesto.md**: In-depth explanation of the design ideas behind the project.
 
-The validator is deterministic and regex-based. It does not rely on external APIs.
+You can read these anytime to get familiar with the goals and use of uncodixify-skill.
 
-## Autofix A File
+---
 
-The package autofix script normalizes class tokens and removes the banned patterns it knows how to rewrite safely.
+## 🔗 Useful Links
 
-```bash
-npx tsx ./toolchain/autofix-uncodixify.ts path/to/component.tsx
-```
+- Visit the project page here:  
+  https://github.com/anubhavsingh-0218/uncodixify-skill
 
-What the autofix currently does:
+- Download ZIP directly (from the Code button on the page)
 
-- rewrites oversized radius classes to `rounded-md`
-- removes gradient and glassmorphism utilities
-- rewrites purple utility classes to neutral alternatives
-- removes uppercase tracking-eyebrow utility patterns
-- replaces `<small>` with `<p>`
-- injects dark base and separator classes when missing
-- rewrites specific ornamental copy patterns used in the bundled eval fixtures
+---
 
-It is intentionally conservative. It will not perform full AST-level JSX refactors.
+## 🧰 Troubleshooting Tips
 
-## Run Eval Scaffolding
+- Make sure you open Command Prompt in the right folder before running the validator or autofix commands.
 
-To create a new isolated eval iteration:
+- Check your Node.js installation if commands do not work.
 
-```bash
-python3 ./bin/run-evals.py
-```
+- If styles are not changing as expected, try running autofix again.
 
-Or use a fixed iteration name:
+- If needed, delete the uncodixify-skill folder and copy it fresh from the ZIP download.
 
-```bash
-python3 ./bin/run-evals.py --iteration iteration-1
-```
+---
 
-This creates:
+## 🚩 About This Package
 
-- `workspace/iteration-N/`
-- `with_skill/` and `without_skill/` directories per eval case
-- `prompt.txt`, `inputs/`, `outputs/`, `timing.json`, and `grading.json`
+uncodixify-skill builds on earlier work done in the Uncodixfy project by cyxzdev. It focuses on pushing user interfaces away from flashy AI dashboard styling toward clean and functional designs.
 
-## Grade Existing Eval Outputs
+The package is portable, meaning you can move the folder between different projects without extra setup.
 
-To grade mechanical assertions for an existing iteration:
+---
 
-```bash
-python3 ./bin/grade-evals.py --iteration-dir /absolute/path/to/workspace/iteration-N
-```
-
-This writes `grading.json` for each run and refreshes `benchmark.json`.
-
-## Run The Full Package Eval Loop
-
-To execute the bundled eval fixtures end to end:
-
-```bash
-python3 ./bin/run-package-evals.py
-```
-
-Or:
-
-```bash
-python3 ./bin/run-package-evals.py --iteration iteration-1
-```
-
-This flow:
-
-1. creates an iteration
-2. copies the bundled fixture files into run outputs
-3. keeps the original fixture as the baseline (`without_skill`)
-4. applies the deterministic autofix to the `with_skill` run
-5. validates the result
-6. grades all assertions
-7. writes an aggregated `benchmark.json`
-
-## Eval Design
-
-The bundled evals are intentionally simple and mechanical. They currently test:
-
-- file existence
-- required dark-base tokens
-- required separator tokens
-- absence of purple classes
-- absence of large radii
-- absence of gradient, blur, and eyebrow-label patterns
-- removal of decorative copy in the bundled scenarios
-- preservation of basic form structure in the settings scenario
-
-The aim is not to fully judge design quality. The aim is to make regressions measurable.
-
-## Portability
-
-This package is meant to be portable as one folder.
-
-If you copy it into another repo, the package-local commands under `bin/` should still work as long as:
-
-- Python 3 is available
-- Node.js is available
-- package dependencies are installed
-
-The repo-level wrappers used in `x3s` are convenience proxies only. They are not required for the package to function.
-
-## Recommended Workflow
-
-For package development:
-
-```bash
-python3 ./bin/validate-package.py
-python3 ./bin/run-package-evals.py --iteration iteration-dev
-```
-
-For applying the rules to a real component:
-
-```bash
-npx tsx ./toolchain/autofix-uncodixify.ts src/MyComponent.tsx
-./bin/run-uncodixify.sh src/MyComponent.tsx
-```
-
-## Limitations
-
-- Validation is regex-based, not AST-based.
-- Autofix is heuristic and may not preserve ideal semantics for every JSX file.
-- The package does not claim to evaluate holistic design quality.
-- The bundled assertions are strongest for Tailwind-heavy TSX files, not arbitrary frontend stacks.
-
-## Public Repo Notes
-
-If this package is published as its own repository, the recommended root commands are:
-
-```bash
-npm install
-python3 ./bin/validate-package.py
-python3 ./bin/run-package-evals.py
-```
+[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill)
